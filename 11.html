@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>과학 실험실</title>
+  <style>
+    :root {
+      --main-color: #2e86de;
+      --bg-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      --text-glow: #5dade2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', 'Pretendard', sans-serif;
+      background: var(--bg-gradient);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: transparent;
+      background-image: linear-gradient(90deg, var(--main-color), #74b9ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+
+      /* 타이핑 효과 */
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid rgba(0,0,0,0.2);
+      width: 0;
+      animation: typing 2.8s steps(20, end) forwards, blink 0.75s step-end infinite, softGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 22ch }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: rgba(0,0,0,0.2) }
+    }
+
+    @keyframes softGlow {
+      0%, 100% {
+        text-shadow: 0 0 6px var(--text-glow);
+      }
+      50% {
+        text-shadow: 0 0 12px var(--text-glow);
+      }
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 12px;
+    }
+
+    main {
+      margin-top: 50px;
+      width: 100%;
+      max-width: 800px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    main:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .experiment-section {
+      text-align: center;
+    }
+
+    .experiment-section p {
+      font-size: 1.15rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .title {
+        font-size: 2rem;
+      }
+
+      main {
+        padding: 25px;
+      }
+
+      .experiment-section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title">🔬 과학 실험실</div>
+    <div class="subtitle">탐구하고, 실험하고, 배우는 즐거움!</div>
+  </header>
+
+  <main>
+    <section class="experiment-section">
+      <p>이곳은 다양한 과학 실험을 소개하는 공간입니다.</p>
+      <p>아래 메뉴를 통해 실험을 탐색해보세요.</p>
+    </section>
+  </main>
+</body>
+</html>
